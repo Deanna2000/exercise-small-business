@@ -34,25 +34,27 @@ const employeeList = function () {
                 else if (employee.deptID === "undefined") {
                     console.log("No department is listed for this employee.")
                 }
-        api.getComputer(employee.compID)
-        .then(oneComp => {
-            //Iterate over computer list
-            oneComp.forEach(id => {
-                if(employee.deptID === id.deptID){
-                $(`#${employee.empID}`).append(
-                    `
-                    <section>
-                    Dept: ${id.type}
-                    </section>
-                    `
-                )}
-                else if (employee.deptID === "undefined") {
-                    console.log("No department is listed for this employee.")
-                }
             })
-        })
+            api.getComputer(employee.compID)
+            .then(oneComp => {
+                //Iterate over computer list
+                oneComp.forEach(cid => {
+                    if(employee.compID === cid.compID){
+                    $(`#${employee.empID}`).append(
+                        `
+                        <section>
+                        Computer: ${cid.type}
+                        </section>
+                        `
+                    )}
+                    else if (employee.compID === "undefined") {
+                        console.log("No computer is listed for this employee.")
+                    }
+            })
 })
 })}
+)}
+)}
 
 
 module.exports = employeeList

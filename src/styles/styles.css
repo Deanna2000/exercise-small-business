@@ -1,0 +1,28 @@
+body{
+    font-family: 'Sunflower', sans-serif;
+    width: 100%;
+    background-image: linear-gradient(rgba(137, 240, 128, 0.6), rgba(0, 140, 255, 0.363)),
+    url("./floral.jpg");
+    color: rgba(87, 84, 84, 0.918);
+
+}
+
+h1{
+    font-weight: 400;
+    font-size: 1.4em;
+}
+
+#employeeName{
+    display: inline-block;
+    background-color: aquamarine;
+    width: 200px;
+    margin: 10px;
+    border: gray solid 2px;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+#employee-list{
+    text-align: center;
+    display: block;
+}

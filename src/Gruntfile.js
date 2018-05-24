@@ -53,7 +53,8 @@ module.exports = function foo(grunt) {
               files: [
                   // includes files within path
                   { expand: true, src: ["index.html"], dest: "../dist/", filter: "isFile" },
-                  {expand: true, src: ["styles/*.css"], dest: "../dist/", filter: "isFile"}
+                  {expand: true, src: ["styles/*.css"], dest: "../dist/", filter: "isFile"},
+                  {expand: true, src: ["styles/*.jpg"], dest: "../dist/", filter: "isFile"}
               ]
           }
       },
